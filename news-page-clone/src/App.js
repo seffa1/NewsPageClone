@@ -35,11 +35,13 @@ function App() {
       .get(
         `https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=${API_KEY}&pageSize=4`
       )
-      .then((response) =>
+      .then((response) => {
         setArticles(
           response.data.articles.map((article) => newsApiParser(article))
-        )
-      )
+        );
+        console.log(response.data.articles);
+      })
+
       .catch((error) => console.log(error));
   }, []);
 
@@ -48,7 +50,11 @@ function App() {
       <Navbar />
       <Hero article={articles[0]} />
       <div className="container">
-        <Popular />
+        <Popular
+          article1={articles[1]}
+          article2={articles[2]}
+          article3={articles[3]}
+        />
         <Topic title={"Investigations"} link={"1"} />
         <Topic title={"Geopolitics & Finance"} link={"1"} />
         <Topic title={"Health"} link={"1"} />

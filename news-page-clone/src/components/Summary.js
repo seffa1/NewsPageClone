@@ -14,10 +14,10 @@ function Summary(props) {
         <p className="Summary__summary">{props.summary}</p>
         {props.link && (
           <div className="Summary__link-container">
-            <a href={props.link} className="Summary__link">
+            <a href={props.link} className="link" target="_blank">
               READ ARTICLE
             </a>
-            <i class="Summary__link__arrow fa-solid fa-arrow-down"></i>
+            <i class="link__arrow fa-solid fa-arrow-down"></i>
           </div>
         )}
       </section>

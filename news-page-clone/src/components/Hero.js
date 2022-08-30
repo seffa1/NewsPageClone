@@ -4,12 +4,15 @@ import earth from "../images/earth.jpg";
 function Hero(props) {
   return (
     <section className="Hero">
-      <img src={earth} className="Hero__img" />
+      <img
+        src={props.article ? props.article.urlToImage : earth}
+        className="Hero__img"
+      />
 
       {props.article && (
         <article className="Hero__article">
           <header className="Hero__article__heading">
-            <div className="Topic-tag Topic-tag--red">TECHNOLOGY</div>
+            <div className="Topic-tag Topic-tag--red">TOP STORY</div>
             <div className="Hero__article__heading__author">
               {props.article.author}
             </div>
@@ -24,6 +27,16 @@ function Hero(props) {
           <footer className="Hero__article__footer">
             {props.article.description}
           </footer>
+          <div className="Hero__link-container">
+            <a
+              href={props.article.url}
+              className="link link--white"
+              target="_blank"
+            >
+              READ ARTICLE
+            </a>
+            <i class="link__arrow link__arrow--white fa-solid fa-arrow-down"></i>
+          </div>
         </article>
       )}
     </section>

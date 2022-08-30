@@ -3,39 +3,30 @@ import Summary from "./Summary";
 
 // Shows the top three most popular articles overall
 
-function Popular() {
+function Popular(props) {
   return (
     <section className="Popular">
-      <Summary
-        tag={"TECHNOLOGY"}
-        title={
-          "Why is the World Health Organization accused of mishandling the coronavirus"
-        }
-        summary={
-          "Teresa Tam is hopeful Canada's advance order deals from leading American COVID-19 vaccine candidates will meet Canada's vaccine supply..."
-        }
-        link={"1"}
-      />
-      <Summary
-        tag={"TECHNOLOGY"}
-        title={
-          "Why is the World Health Organization accused of mishandling the coronavirus"
-        }
-        summary={
-          "Teresa Tam is hopeful Canada's advance order deals from leading American COVID-19 vaccine candidates will meet Canada's vaccine supply..."
-        }
-        link={"1"}
-      />
-      <Summary
-        tag={"TECHNOLOGY"}
-        title={
-          "Why is the World Health Organization accused of mishandling the coronavirus"
-        }
-        summary={
-          "Teresa Tam is hopeful Canada's advance order deals from leading American COVID-19 vaccine candidates will meet Canada's vaccine supply..."
-        }
-        link={"1"}
-      />
+      {props.article1 && (
+        <Summary
+          title={props.article1.title}
+          summary={props.article1.description}
+          link={props.article1.url}
+        />
+      )}
+      {props.article2 && (
+        <Summary
+          title={props.article2.title}
+          summary={props.article2.description}
+          link={props.article2.url}
+        />
+      )}
+      {props.article3 && (
+        <Summary
+          title={props.article3.title}
+          summary={props.article3.description}
+          link={props.article3.url}
+        />
+      )}
     </section>
   );
 }

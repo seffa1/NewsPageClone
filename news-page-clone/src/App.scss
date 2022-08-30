@@ -53,6 +53,27 @@ h3 {
   }
 }
 
+// Links
+.link {
+  text-decoration: none;
+  color: rgba($color-seconday, 1);
+  font-family: "Share Tech Mono", monospace;
+
+  &__arrow {
+    color: $color-seconday;
+    transform: rotate(225deg);
+    margin-left: 0.7rem;
+
+    &--white {
+      color: rgba($color-primary, 0.7);
+    }
+  }
+
+  &--white {
+    color: rgba($color-primary, 0.7);
+  }
+}
+
 // Navbar
 .Navbar {
   font-family: "Share Tech Mono", monospace;
@@ -103,6 +124,11 @@ h3 {
 .Hero {
   position: relative;
 
+  &__link {
+    text-decoration: none;
+    color: $color-primary;
+  }
+
   &__img {
     width: 100%;
     height: 42rem;
@@ -138,6 +164,7 @@ h3 {
     &__footer {
       color: rgba($color-primary, 0.7);
       width: 40em;
+      margin-bottom: 1rem;
     }
   }
 }
@@ -160,18 +187,6 @@ h3 {
     margin-top: 1.7rem;
     color: rgba($color-seconday, 0.9);
     margin-bottom: 1rem;
-  }
-
-  &__link {
-    text-decoration: none;
-    color: rgba($color-seconday, 1);
-    font-family: "Share Tech Mono", monospace;
-
-    &__arrow {
-      color: $color-seconday;
-      transform: rotate(225deg);
-      margin-left: 0.7rem;
-    }
   }
 
   &__img {
