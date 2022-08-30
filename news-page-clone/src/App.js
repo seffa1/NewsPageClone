@@ -39,7 +39,7 @@ function App() {
         setArticles(
           response.data.articles.map((article) => newsApiParser(article))
         );
-        console.log(response.data.articles);
+        // console.log(response.data.articles);
       })
 
       .catch((error) => console.log(error));
@@ -55,9 +55,9 @@ function App() {
           article2={articles[2]}
           article3={articles[3]}
         />
-        <Topic title={"Investigations"} link={"1"} />
-        <Topic title={"Geopolitics & Finance"} link={"1"} />
-        <Topic title={"Health"} link={"1"} />
+        <Topic API_KEY={API_KEY} title={"Technology"} link={"1"} />
+        <Topic API_KEY={API_KEY} title={"Science"} link={"1"} />
+        <Topic API_KEY={API_KEY} title={"Health"} link={"1"} />
       </div>
     </div>
   );
