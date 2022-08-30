@@ -21,6 +21,7 @@ function newsApiParser(article) {
 }
 
 function App() {
+  // https://newsapi.org/docs/endpoints/top-headlines
   const API_KEY = "";
   const [articles, setArticles] = useState([]);
 
