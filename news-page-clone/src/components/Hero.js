@@ -8,7 +8,7 @@ function Hero() {
 
       <article className="Hero__article">
         <header className="Hero__article__heading">
-          <div className="Topic-tag--red">TECHNOLOGY</div>
+          <div className="Topic-tag Topic-tag--red">TECHNOLOGY</div>
           <div className="Hero__article__heading__author">Sam Cooper</div>
           <div className="Hero__article__heading__dot">
             <i class="fa-solid fa-circle"></i>

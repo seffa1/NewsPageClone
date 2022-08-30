@@ -6,9 +6,36 @@ import Summary from "./Summary";
 function Popular() {
   return (
     <section className="Popular">
-      <Summary />
-      <Summary />
-      <Summary />
+      <Summary
+        tag={"TECHNOLOGY"}
+        title={
+          "Why is the World Health Organization accused of mishandling the coronavirus"
+        }
+        summary={
+          "Teresa Tam is hopeful Canada's advance order deals from leading American COVID-19 vaccine candidates will meet Canada's vaccine supply..."
+        }
+        link={"1"}
+      />
+      <Summary
+        tag={"TECHNOLOGY"}
+        title={
+          "Why is the World Health Organization accused of mishandling the coronavirus"
+        }
+        summary={
+          "Teresa Tam is hopeful Canada's advance order deals from leading American COVID-19 vaccine candidates will meet Canada's vaccine supply..."
+        }
+        link={"1"}
+      />
+      <Summary
+        tag={"TECHNOLOGY"}
+        title={
+          "Why is the World Health Organization accused of mishandling the coronavirus"
+        }
+        summary={
+          "Teresa Tam is hopeful Canada's advance order deals from leading American COVID-19 vaccine candidates will meet Canada's vaccine supply..."
+        }
+        link={"1"}
+      />
     </section>
   );
 }
