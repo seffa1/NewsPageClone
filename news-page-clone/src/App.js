@@ -26,6 +26,10 @@ function App() {
 
   // Get top 4 stories
   useEffect(() => {
+    if (!API_KEY) {
+      console.log("NO API KEY DEFINED");
+      return;
+    }
     // GET request using axios inside useEffect React hook
     axios
       .get(
