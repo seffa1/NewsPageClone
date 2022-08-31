@@ -6,7 +6,7 @@
 
 // Colors
 $color-primary: #f2e6d9;
-$color-seconday: #1a1915;
+$color-seconday: #0b0a06;
 $color-tag-red: #f13738;
 $color-tag-blue: #18a8ef;
 $color-tag-green: #20ae5a;
@@ -421,5 +421,23 @@ h3 {
     &__information {
       flex-direction: column;
     }
+  }
+}
+
+// Subscribe
+.Subscribe {
+  color: $color-primary;
+  background: $color-seconday;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 5rem;
+
+  h3 {
+    font-weight: 300;
+  }
+
+  &__email-container {
   }
 }

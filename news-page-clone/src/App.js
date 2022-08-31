@@ -5,6 +5,8 @@ import Popular from "./components/Popular";
 import Topic from "./components/Topic";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Subscribe from "./components/Subscribe";
+import Footer from "./components/Footer";
 
 // TODO: Populate data with API:
 // https://jasonwatmore.com/post/2020/07/17/react-axios-http-get-request-examples
@@ -60,6 +62,8 @@ function App() {
         <Topic API_KEY={API_KEY} title={"Science"} link={"1"} />
         <Topic API_KEY={API_KEY} title={"Health"} link={"1"} />
       </div>
+      <Subscribe />
+      <Footer />
     </div>
   );
 }

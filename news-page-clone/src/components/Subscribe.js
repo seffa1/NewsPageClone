@@ -8,6 +8,8 @@ function Subscribe() {
         Engaging copy for member subscription with the CTA to enter email and
         subscribe
       </h3>
+
+      <div className="Subscribe__email-container"></div>
     </section>
   );
 }
