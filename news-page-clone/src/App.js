@@ -22,7 +22,7 @@ function newsApiParser(article) {
 
 function App() {
   // https://newsapi.org/docs/endpoints/top-headlines
-  const API_KEY = "";
+  const API_KEY = "880af114303b43ac96c84590f587e886";
   const [articles, setArticles] = useState([]);
 
   // Get top 4 stories
