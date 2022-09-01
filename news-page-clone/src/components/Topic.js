@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Summary from "./Summary";
 import map from "../images/map.jpeg";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function newsApiParser(article) {
   // date formatting
@@ -37,16 +38,16 @@ function Topic(props) {
       .catch((error) => console.log(error));
   }, []);
 
-  console.log(articles);
+  // console.log(articles);
 
   return (
     <section className="Topic">
       <div className="Topic__title-container">
         <h1 className="Topic__title">{props.title}</h1>
         <div className="Topic__link-container">
-          <a href={props.link} className="Topic__link">
+          <Link to={props.title.toLowerCase()} className="Topic__link">
             SEE ALL
-          </a>
+          </Link>
           <i class="Topic__link__arrow fa-solid fa-arrow-down"></i>
         </div>
       </div>

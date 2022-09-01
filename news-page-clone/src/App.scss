@@ -103,9 +103,7 @@ h3 {
 .Navbar {
   font-family: "Share Tech Mono", monospace;
   background: $color-primary;
-
   display: grid;
-
   grid-template-columns: 1fr 0.7fr 5fr 0.7fr 1fr;
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
@@ -114,7 +112,7 @@ h3 {
   align-items: center;
   padding-top: 1.4rem;
   padding-bottom: 1.4rem;
-  min-height: 75px;
+  min-height: 105px;
 
   &__search {
     grid-area: 1 / 1 / 2 / 2;
@@ -124,11 +122,15 @@ h3 {
   }
 
   &__logo {
-    font-size: 4rem;
+    font-size: 3rem;
 
     &__mobile {
       display: none;
     }
+  }
+
+  &__logo:hover {
+    font-size: 3.5rem;
   }
 
   &__ul {
@@ -141,6 +143,12 @@ h3 {
 
     &__li {
       white-space: nowrap;
+      text-decoration: none;
+      color: $color-seconday;
+    }
+    &__li:hover {
+      text-decoration: underline;
+      color: black;
     }
   }
 
@@ -423,6 +431,11 @@ h3 {
     }
   }
 }
+@media screen and (max-width: 400px) {
+  .Topic__img {
+    width: 100%;
+  }
+}
 
 // Subscribe
 .Subscribe {
@@ -440,4 +453,40 @@ h3 {
 
   &__email-container {
   }
+}
+
+// Articles
+.Articles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+@media screen and (max-width: 1600px) {
+  .Articles {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .Articles {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .Articles {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+  }
+}
+
+.Articles__title {
+  position: absolute;
+  color: $color-primary;
+  right: 20px;
 }

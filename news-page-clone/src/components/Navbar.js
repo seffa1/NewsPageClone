@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const lines_ref = useRef(null);
@@ -24,7 +25,9 @@ function Navbar() {
 
   return (
     <nav className="Navbar">
-      <i class="fa-solid fa-newspaper Navbar__logo__mobile"></i>
+      <Link to="/" className="Navbar__ul__li">
+        <i class="fa-solid fa-newspaper Navbar__logo__mobile"></i>
+      </Link>
       <i
         class="fa-solid fa-bars Navbar__lines"
         ref={lines_ref}
@@ -32,17 +35,30 @@ function Navbar() {
       ></i>
       <i class="fa-solid fa-magnifying-glass Navbar__search"></i>
       <ul className="Navbar__ul" ref={ul_ref}>
-        <li className="Navbar__ul__li">Investigations</li>
-        <li className="Navbar__ul__li">Geopolitics & Finance</li>
-        <li className="Navbar__ul__li">Health</li>
+        <Link to="/technology" className="Navbar__ul__li">
+          Technology
+        </Link>
+
+        <Link to="/science" className="Navbar__ul__li">
+          Science
+        </Link>
+        <Link to="/health" className="Navbar__ul__li">
+          Health
+        </Link>
         {!mobile && (
-          <li className="Navbar__ul__li">
+          <Link to="/" className="Navbar__ul__li">
             <i class="fa-solid fa-newspaper Navbar__logo"></i>
-          </li>
+          </Link>
         )}
-        <li className="Navbar__ul__li">Technology</li>
-        <li className="Navbar__ul__li">National Security</li>
-        <li className="Navbar__ul__li">OP/Analysis</li>
+        <Link to="/business" className="Navbar__ul__li">
+          Business
+        </Link>
+        <Link to="/entertainment" className="Navbar__ul__li">
+          Entertainment
+        </Link>
+        <Link to="/sports" className="Navbar__ul__li">
+          Sports
+        </Link>
       </ul>
     </nav>
   );
