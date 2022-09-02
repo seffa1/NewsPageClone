@@ -9,6 +9,7 @@ import Health from "./pages/Health";
 import Business from "./pages/Business";
 import Entertainment from "./pages/Entertainment";
 import Sports from "./pages/Sports";
+import Subscribe from "./components/Subscribe";
 
 // TODO: Populate data with API:
 // https://jasonwatmore.com/post/2020/07/17/react-axios-http-get-request-examples
@@ -40,6 +41,7 @@ function App() {
           ></Route>
           <Route path="/sports" element={<Sports API_KEY={API_KEY} />}></Route>
         </Routes>
+        <Subscribe />
         <Footer />
       </div>
     </BrowserRouter>

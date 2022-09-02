@@ -30,6 +30,10 @@ h3 {
   font-size: 1.4rem;
 }
 
+h4 {
+  font-size: 1.3rem;
+}
+
 @media screen and (max-width: 1410px) {
   h1 {
     font-size: 3.7rem;
@@ -452,6 +456,97 @@ h3 {
   }
 
   &__email-container {
+    outline: 1px solid rgba($color-primary, 1);
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  &__envelope {
+    margin-right: 10px;
+    margin-left: 10px;
+    color: rgba($color-primary, 0.6);
+  }
+  &__input {
+    background: none;
+    border: none;
+    color: $color-primary;
+  }
+  &__input:focus {
+    outline: none;
+  }
+  &__button {
+    all: unset;
+    cursor: pointer;
+    color: $color-seconday;
+    background: $color-primary;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 0.9rem;
+    height: 100%;
+  }
+}
+
+// Footer
+.Footer {
+  background: $color-primary;
+  color: $color-seconday;
+  display: flex;
+  padding: 4rem;
+
+  &__statement {
+    max-width: 35em;
+    margin-right: auto;
+
+    &__logo {
+      font-size: 3rem;
+    }
+    &__p {
+      margin-top: 1rem;
+      font-size: 1.3rem;
+    }
+    &__phone {
+      margin-top: 2rem;
+      font-size: 1.1rem;
+    }
+    &__email {
+      font-size: 1.1rem;
+    }
+
+    &__tm {
+      margin-top: 4rem;
+      color: rgba($color-seconday, 0.5);
+    }
+  }
+  &__links {
+    display: flex;
+    gap: 7rem;
+
+    &__categories {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    &__about {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    &__follow {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    &__links {
+      text-decoration: none;
+      color: rgba($color-seconday, 0.8);
+    }
+
+    &__links:hover {
+      text-decoration: underline;
+    }
   }
 }
 

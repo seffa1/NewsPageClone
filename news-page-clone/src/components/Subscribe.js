@@ -9,7 +9,15 @@ function Subscribe() {
         subscribe
       </h3>
 
-      <div className="Subscribe__email-container"></div>
+      <div className="Subscribe__email-container">
+        <i class="fa-regular fa-envelope Subscribe__envelope"></i>
+        <input
+          type="email"
+          placeholder="Your email"
+          className="Subscribe__input"
+        />
+        <button className="Subscribe__button">Subscribe</button>
+      </div>
     </section>
   );
 }

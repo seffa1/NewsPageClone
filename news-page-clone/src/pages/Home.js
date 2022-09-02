@@ -2,7 +2,6 @@ import React from "react";
 import Hero from "../components/Hero";
 import Popular from "../components/Popular";
 import Topic from "../components/Topic";
-import Subscribe from "../components/Subscribe";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -58,7 +57,6 @@ function Home(props) {
         <Topic API_KEY={API_KEY} title={"Science"} link={"1"} />
         <Topic API_KEY={API_KEY} title={"Health"} link={"1"} />
       </div>
-      <Subscribe />
     </>
   );
 }
