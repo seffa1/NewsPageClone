@@ -15,6 +15,7 @@ import Subscribe from "./components/Subscribe";
 // https://jasonwatmore.com/post/2020/07/17/react-axios-http-get-request-examples
 
 function App() {
+  // THIS KEY SHOULD BE MOVED TO A CONFIG FILE, OR TO A LOCAL VARIABLE!
   const API_KEY = "880af114303b43ac96c84590f587e886";
   return (
     <BrowserRouter>
