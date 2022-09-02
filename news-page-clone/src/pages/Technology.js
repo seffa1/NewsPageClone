@@ -3,6 +3,8 @@ import Articles from "../components/Articles";
 import Hero from "../components/Hero";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import config from "../config";
+import data from "../data/technologyData";
 
 function newsApiParser(article) {
   // date formatting
@@ -19,9 +21,16 @@ function Technology(props) {
   const API_KEY = props.API_KEY;
 
   const [articles, setArticles] = useState([]);
+  //   console.log(articles);
 
   // Get top 4 stories
   useEffect(() => {
+    // This is because we cant use the newsAPI on production without paying them
+    if (config.build === "production") {
+      setArticles(data);
+      return;
+    }
+
     if (!API_KEY) {
       console.log("NO API KEY DEFINED");
       return;
