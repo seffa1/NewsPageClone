@@ -3,6 +3,7 @@ import Summary from "./Summary";
 import map from "../images/map.jpeg";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import config from "../config";
 
 function newsApiParser(article) {
   // date formatting
@@ -18,6 +19,11 @@ function newsApiParser(article) {
 function Topic(props) {
   const [articles, setArticles] = useState([]);
   useEffect(() => {
+    if (config.build === "production") {
+      setArticles([props.article]);
+      return;
+    }
+
     if (!props.API_KEY) {
       console.log("NO API KEY DEFINED");
       return;

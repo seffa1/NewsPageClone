@@ -6,6 +6,9 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import config from "../config";
 import data from "../data/homeData";
+import dataTech from "../data/technologyData";
+import dataScience from "../data/scienceData";
+import dataHealth from "../data/healthData";
 
 function newsApiParser(article) {
   // date formatting
@@ -62,9 +65,24 @@ function Home(props) {
           article2={articles[2]}
           article3={articles[3]}
         />
-        <Topic API_KEY={API_KEY} title={"Technology"} link={"1"} />
-        <Topic API_KEY={API_KEY} title={"Science"} link={"1"} />
-        <Topic API_KEY={API_KEY} title={"Health"} link={"1"} />
+        <Topic
+          API_KEY={API_KEY}
+          title={"Technology"}
+          link={"1"}
+          article={dataTech[0]}
+        />
+        <Topic
+          API_KEY={API_KEY}
+          title={"Science"}
+          link={"1"}
+          article={dataScience[0]}
+        />
+        <Topic
+          API_KEY={API_KEY}
+          title={"Health"}
+          link={"1"}
+          article={dataHealth[0]}
+        />
       </div>
     </>
   );
